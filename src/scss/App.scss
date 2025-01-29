@@ -1,0 +1,37 @@
+// Tools
+@import "./tools/_Fonts.scss";
+@import "./tools/Colors.scss";
+
+// components
+@import "./Header.scss";
+@import "./Footer.scss";
+
+// Global variables
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../assets/back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-attachment: fixed;
+}
+
+button {
+  font-family: "Arial";
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.margin {
+  margin: 0.5rem;
+}
+
+img {
+  cursor: pointer;
+}
