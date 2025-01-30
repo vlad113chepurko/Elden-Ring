@@ -2,9 +2,12 @@
 @import "./tools/_Fonts.scss";
 @import "./tools/Colors.scss";
 
-// components
+// components-desktop
 @import "./Header.scss";
 @import "./Footer.scss";
+
+// components-mobile
+@import "./phone/HeaderMobile";
 
 // Global variables
 * {
@@ -34,4 +37,14 @@ button {
 
 img {
   cursor: pointer;
+}
+
+ul li a {
+  text-decoration: none;
+  @include text(white, $Cinzel);
+  font-size: 0.8rem;
+
+  &:hover {
+    color: $white-brown;
+  }
 }

@@ -13,7 +13,12 @@ export default function Header() {
   return (
     <header className="header">
       <section>
-        <img className="logo" src={logo} alt="logo" />
+        <img
+          onClick={() => window.location.reload()}
+          className="logo"
+          src={logo}
+          alt="logo"
+        />
         <a href="#">Shop</a>
         <a href="#">News</a>
         <a href="#">Reviews</a>
@@ -34,7 +39,7 @@ export default function Header() {
           onMouseEnter={() => setSearchIsHover(true)}
           onMouseLeave={() => setSearchIsHover(false)}
           className="margin"
-          src={ searchIsHover ? searchHover : search}
+          src={searchIsHover ? searchHover : search}
           alt="search"
           height={30}
           width={30}

@@ -19,7 +19,7 @@
 .header a {
   text-decoration: none;
   margin: 1rem;
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: white;
   cursor: pointer;
   font-family: "Cinzel";
@@ -36,11 +36,12 @@
 
 .logo {
   margin-right: 42px;
+  width: 200px;
+  height: auto;
   transition: 100ms ease-in-out;
 }
 .logo:hover {
   transform: scale(1.1);
-  cursor: pointer;
 }
 
 .language-button {
@@ -68,15 +69,105 @@
 
 .shop-button {
   background-color: #7A6647;
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
+  height: 30px;
   border: 2px solid #7A6647;
   font-weight: bold;
+  display: flex;
+  flex-direction: none;
+  justify-content: center;
+  align-items: center;
   color: white;
   cursor: pointer;
   font-family: "Arial";
   transition: 300ms ease;
 }
 .shop-button:hover {
+  color: #7A6647;
+  background-color: #030706;
+  border: 2px solid #7A6647;
+}
+
+.header-mobile {
+  max-width: 100%;
+  max-height: auto;
+  height: 50px;
+  padding: 10px;
+  background-color: #030706;
+  text-align: center;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-mobile {
+  max-width: 120px;
+  max-height: 120px;
+  transition: 100ms ease-in-out;
+}
+.logo-mobile:hover {
+  transform: scale(1.1);
+}
+
+.header-mobile-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-nav {
+  width: 100%;
+  background-color: #030706;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  position: absolute;
+  padding-left: 0.3rem;
+  top: 5.4%;
+  left: 0;
+  z-index: 999;
+}
+
+.mobile-menu {
+  text-align: left;
+  list-style: none;
+}
+
+.shop-button-container {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-button-nav {
+  background-color: #7A6647;
+  height: 30px;
+  border-radius: 0.2rem;
+  border: 2px solid #7A6647;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: white;
+  cursor: pointer;
+  font-family: "Arial";
+  display: flex;
+  flex-direction: none;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms ease;
+}
+.shop-button-nav:hover {
   color: #7A6647;
   background-color: #030706;
   border: 2px solid #7A6647;
@@ -108,4 +199,15 @@ button {
 
 img {
   cursor: pointer;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-family: "Cinzel";
+  font-size: 0.8rem;
+}
+ul li a:hover {
+  color: #7A6647;
 }/*# sourceMappingURL=App.css.map */

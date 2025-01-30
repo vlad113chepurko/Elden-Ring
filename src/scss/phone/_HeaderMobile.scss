@@ -1,0 +1,74 @@
+@import "../tools/mixins";
+
+.header-mobile {
+  max-width: 100%;
+  max-height: auto;
+  height: 50px;
+  padding: 10px;
+
+  background-color: $header-color;
+  text-align: center;
+
+  z-index: 1000;
+  @include flex(space-between, row, center);
+}
+
+.logo-mobile {
+  max-width: 120px;
+  max-height: 120px;
+  transition: 100ms ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.header-mobile-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.right-container {
+  @include flex(center, row, center);
+}
+
+.mobile-nav {
+  width: 100%;
+  background-color: $header-color;
+  @include flex(flex-start, column, left);
+  position: absolute;
+  padding-left: 0.3rem;
+  top: 5.4%;
+  left: 0;
+
+  z-index: 999;
+}
+
+.mobile-menu {
+  text-align: left;
+  list-style: none;
+}
+
+.shop-button-container {
+  max-width: 100%;
+  height: auto;
+  @include flex(center, row, center);
+}
+
+.shop-button-nav {
+  background-color: $white-brown;
+  height: 30px;
+  border-radius: 0.2rem;
+  border: 2px solid $white-brown;
+  font-weight: bold;
+  font-size: 0.8rem;
+  @include text(white, $Arial);
+  @include flex(center, none, center);
+
+  transition: 300ms ease;
+
+  &:hover {
+    color: $white-brown;
+    background-color: $header-color;
+    border: 2px solid $white-brown;
+  }
+}
