@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import logo from "../assets/logo/logo.svg";
-import user from "../assets/buttons/user.svg";
-import search from "../assets/buttons/search.svg";
-import userHover from "../assets/buttons/hover-user.svg";
-import searchHover from "../assets/buttons/hover-search.svg";
+import logo from "..//..//assets/logo/logo.svg";
+import user from "..//..//assets/buttons/user.svg";
+import search from "..//..//assets/buttons/search.svg";
+import userHover from "..//..//assets/buttons/hover-user.svg";
+import searchHover from "..//..//assets/buttons/hover-search.svg";
 
 export default function Header() {
   const [userIsHover, setUserIsHover] = useState(false);

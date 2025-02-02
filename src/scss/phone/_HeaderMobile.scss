@@ -9,6 +9,8 @@
   background-color: $header-color;
   text-align: center;
 
+  position: relative;
+
   z-index: 1000;
   @include flex(space-between, row, center);
 }
@@ -37,7 +39,7 @@
   @include flex(flex-start, column, left);
   position: absolute;
   padding-left: 0.3rem;
-  top: 5.4%;
+  top: 100%;
   left: 0;
 
   z-index: 999;

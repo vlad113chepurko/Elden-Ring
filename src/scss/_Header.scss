@@ -75,3 +75,51 @@
     border: 2px solid $white-brown;
   }
 }
+
+// Under Header
+.under-header-container {
+  max-width: 100%;
+  height: auto;
+
+  margin-bottom: 13%;
+
+  padding: 1rem;
+
+  @include flex(center, row, center);
+  @include text(white, $Cinzel);
+  font-size: 2rem;
+  font-weight: normal;
+}
+.under-header-container article {
+  width: 100%;
+}
+
+.left-article {
+  @include flex(left, none, center);
+}
+
+.right-article {
+  @include flex(right, none, center);
+}
+
+.under-header-container-image {
+  width: 100%;
+  height: auto;
+  @include flex(center, none, center);
+}
+
+.under-header-container-image img {
+  width: 400px;
+  height: auto;
+}
+
+@media screen and (max-width: 850px) {
+  .under-header-container img {
+    width: 140px;
+  }
+
+  .under-header-container {
+    padding: 0;
+    font-size: 1rem;
+  }
+}

@@ -10,3 +10,8 @@
   cursor: pointer;
   font-family: $font;
 }
+
+@mixin max-width-height {
+  max-width: 100%;
+  height: auto;
+}

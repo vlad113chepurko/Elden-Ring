@@ -5,12 +5,13 @@ import "./css/App.css";
 import { useEffect, useState } from "react";
 
 // components-desktop
-import Header from "./components/Header";
-import Main from "./components/Main";
+import Header from "./components/header/Header";
+import Main from "./components/main/Main";
 import Footer from "./components/Footer";
 
 // components-mobile
-import HeaderMobile from "./components/HeaderMobile";
+import HeaderMobile from "./components/header/HeaderMobile";
+import UnderHeader from "./components/header/UnderHeader";
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -28,7 +29,8 @@ function App() {
 
   return (
     <>
-      {width >= 750 ? <Header /> : <HeaderMobile />}
+      {width >= 850 ? <Header /> : <HeaderMobile />}
+      <UnderHeader />
       <Main />
       <Footer />
     </>

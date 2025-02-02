@@ -4,7 +4,9 @@
 
 // components-desktop
 @import "./Header.scss";
+@import './main/Main';
 @import "./Footer.scss";
+
 
 // components-mobile
 @import "./phone/HeaderMobile";
@@ -20,6 +22,8 @@ body {
   background-image: url("../assets/back.png");
   background-repeat: no-repeat;
   background-size: cover;
+
+  overflow-x: hidden;
 
   background-attachment: fixed;
 }
@@ -47,4 +51,8 @@ ul li a {
   &:hover {
     color: $white-brown;
   }
+}
+
+.margin-bottom {
+  margin-bottom: 1rem;
 }

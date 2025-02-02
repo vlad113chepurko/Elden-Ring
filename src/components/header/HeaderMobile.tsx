@@ -1,15 +1,15 @@
 import { useState } from "react";
-import { easeInOut, motion } from "motion/react";
+import { motion } from "motion/react";
 
-import logo from "../assets/logo/logo.svg";
-import user from "../assets/buttons/user.svg";
-import search from "../assets/buttons/search.svg";
-import userHover from "../assets/buttons/hover-user.svg";
-import searchHover from "../assets/buttons/hover-search.svg";
-import menu from "../assets/buttons/menu.svg";
-import menuHover from "../assets/buttons/menu-hover.svg";
-import close from "../assets/buttons/close.svg";
-import closeHover from "../assets/buttons/close-hover.svg";
+import logo from "..//..//assets/logo/logo.svg";
+import user from "..//..//assets/buttons/user.svg";
+import search from "..//..//assets/buttons/search.svg";
+import userHover from "..//..//assets/buttons/hover-user.svg";
+import searchHover from "..//..//assets/buttons/hover-search.svg";
+import menu from "..//..//assets/buttons/menu.svg";
+import menuHover from "..//..//assets/buttons/menu-hover.svg";
+import close from "..//..//assets/buttons/close.svg";
+import closeHover from "..//..//assets/buttons/close-hover.svg";
 
 export default function HeaderMobile() {
   const [isMenu, setIsMenu] = useState(false);
