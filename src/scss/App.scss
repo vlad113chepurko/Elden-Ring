@@ -4,9 +4,8 @@
 
 // components-desktop
 @import "./Header.scss";
-@import './main/Main';
+@import "./main/Main";
 @import "./Footer.scss";
-
 
 // components-mobile
 @import "./phone/HeaderMobile";
@@ -22,8 +21,6 @@ body {
   background-image: url("../assets/back.png");
   background-repeat: no-repeat;
   background-size: cover;
-
-  overflow-x: hidden;
 
   background-attachment: fixed;
 }

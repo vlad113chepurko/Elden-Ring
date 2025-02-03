@@ -1,0 +1,163 @@
+.key-wrapper {
+  width: 100%;
+  height: auto;
+  border: 1px solid red;
+  @include flex(none, column, none);
+}
+
+.key-title {
+  width: 100%;
+  @include text(white, $Arial);
+  font-size: 3rem;
+}
+
+.video-container {
+  width: 50%;
+  border: 1px solid;
+
+  @include flex(flex-end, none, none);
+  padding-right: 1rem;
+}
+
+.video-container-right {
+  width: 50%;
+  border: 1px solid;
+
+  @include flex(flex-start, none, none);
+  padding-left: 1rem;
+}
+
+.text-container {
+  width: 50%;
+  border: 1px solid;
+  padding-left: 1rem;
+  padding-top: 2rem;
+
+  @include flex(flex-start, column, none);
+
+  p {
+    @include text(white, $Cinzel);
+    text-align: justify;
+    width: 80%;
+  }
+}
+
+.text-container-left {
+  width: 50%;
+  border: 1px solid;
+  padding-right: 1rem;
+  padding-top: 2rem;
+
+  text-align: right;
+  @include flex(flex-end, column, flex-end);
+
+  p {
+    @include text(white, $Cinzel);
+    text-align: justify;
+    width: 80%;
+  }
+}
+
+.video-container video {
+  width: 560px;
+  height: 320px;
+}
+
+.video-text-wrapper {
+  max-width: 100%;
+  height: auto;
+  @include flex(center, row, center);
+  border: 1px solid red;
+
+  margin-bottom: 5%;
+}
+
+@mixin position($top, $bottom, $left, $right) {
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+}
+
+@mixin title($width, $height, $align) {
+  position: relative;
+  text-align: $align;
+  width: $width;
+  height: $height;
+  padding: 2rem;
+  background-color: $white-brown;
+
+  @include flex(flex-end, none, center);
+
+  h1 {
+    @include text(white, $Arial);
+  }
+}
+
+.text-container-title-1 {
+  @include title(400px, 4rem, left);
+  @include position(10, none, -10%, none);
+}
+
+.text-container-title-2 {
+  @include title(600px, 4rem, right);
+  @include position(10, none, 10%, none);
+}
+
+.text-container-title-3 {
+  @include title(400px, 4rem, left);
+  @include position(10, none, -10%, none);
+}
+
+@media screen and (max-width: 850px) {
+  .key-wrapper {
+    text-align: center;
+    width: none;
+  }
+  .key-title {
+    font-size: 1.5rem;
+  }
+  .video-text-wrapper {
+    margin-top: 5%;
+    flex-direction: column;
+  }
+
+  .video-container {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    justify-content: center;
+
+    video {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+    }
+  }
+
+  .video-container-right {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    justify-content: center;
+
+    video {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+    }
+  }
+
+  .text-container {
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .text-container-title-1 {
+    @include title(300px, 3.3rem, left);
+    padding: 0;
+    @include flex(flex-start, none, center);
+    @include position(20%, 0, 0, 0);
+  }
+}

@@ -6,7 +6,7 @@
   padding: 2rem;
 
   h1 {
-    font-family: "Arial";
+    font-family: $Arial;
     font-size: 3rem;
   }
 }
@@ -46,8 +46,8 @@
 }
 
 .elden-tree-container-image img {
-  width: 1000px;
-  height: 600px;
+  width: 800px;
+  height: 500px;
   border-radius: 1rem;
   object-fit: cover;
 }
