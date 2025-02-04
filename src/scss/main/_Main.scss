@@ -1,10 +1,78 @@
 // Imports
 @import "./HistoryContainer";
-@import './KeyFeatures';
-@import './Heroes';
+@import "./KeyFeatures";
+@import "./Heroes";
 @import "../tools//mixins";
 
 .main-container {
   max-width: 100%;
   max-height: auto;
+}
+
+.article {
+  @include flex(center, column, center);
+  max-width: 100%;
+  height: auto;
+}
+
+.title-article {
+  @include text($white-brown-title, $Cinzel);
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.article-paragraph {
+  @include text(white, $Arial);
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+
+  width: 100%;
+}
+
+.paragraph-container {
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container-images {
+  max-width: 100%;
+  height: auto;
+
+  padding: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.container-images img {
+  object-fit: contain;
+  width: 500px;
+  height: auto;
+}
+
+.ornament-container {
+  max-width: 100%;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ornament {
+  width: 200px;
+  height: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .title-article {
+    font-size: 1rem;
+  }
+
+  .article-paragraph {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
 }

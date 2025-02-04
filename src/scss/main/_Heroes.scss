@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 0 24px;
   max-width: 100%;
+  height: auto;
 }
 
 .heroes-article {
@@ -47,4 +48,23 @@
 .heroes-image-container img {
   width: 360px;
   height: 400px;
+}
+
+@media screen and (max-width: 850px) {
+  .heroes-images-wrapper {
+    @include flex(center, column, center);
+  }
+
+  .heroes-image-container {
+    width: 50%;
+    height: auto;
+    margin-bottom: 1rem;
+
+    object-fit: cover;
+  }
+
+  .heroes-image-container img {
+    width: 100%;
+    height: 300px;
+  }
 }

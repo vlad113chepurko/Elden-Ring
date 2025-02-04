@@ -712,6 +712,7 @@
   margin: 0 auto;
   padding: 0 24px;
   max-width: 100%;
+  height: auto;
 }
 
 .heroes-article {
@@ -784,11 +785,124 @@
   height: 400px;
 }
 
+@media screen and (max-width: 850px) {
+  .heroes-images-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .heroes-image-container {
+    width: 50%;
+    height: auto;
+    margin-bottom: 1rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .heroes-image-container img {
+    width: 100%;
+    height: 300px;
+  }
+}
 .main-container {
   max-width: 100%;
   max-height: auto;
 }
 
+.article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  height: auto;
+}
+
+.title-article {
+  color: #caad81;
+  cursor: pointer;
+  font-family: "Cinzel";
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.article-paragraph {
+  color: white;
+  cursor: pointer;
+  font-family: "Arial";
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.paragraph-container {
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container-images {
+  max-width: 100%;
+  height: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.container-images img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 500px;
+  height: auto;
+}
+
+.ornament-container {
+  max-width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ornament {
+  width: 200px;
+  height: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .title-article {
+    font-size: 1rem;
+  }
+  .article-paragraph {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}
 .header-mobile {
   max-width: 100%;
   max-height: auto;
@@ -934,7 +1048,10 @@ body {
   background-image: url("../assets/back.png");
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-x: hidden;
+  background-position: center;
   background-attachment: fixed;
+  background-color: black;
 }
 
 button {
@@ -975,8 +1092,8 @@ ul li a:hover {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: none;
+          flex-direction: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -985,7 +1102,14 @@ ul li a:hover {
           align-items: center;
 }
 .elden-line img {
-  width: 100%;
+  width: 1000px;
   height: 50px;
   margin: 5%;
+}
+
+@media screen and (max-width: 850px) {
+  .elden-line img {
+    width: 300px;
+    height: 25px;
+  }
 }/*# sourceMappingURL=App.css.map */
