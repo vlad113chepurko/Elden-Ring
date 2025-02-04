@@ -1,10 +1,13 @@
 import video1 from "..//../assets/videos/eldenring-kf-01-animated-new.webm";
 import video2 from "..//../assets/videos/eldenring-kf-02-animated-new.webm";
 import video3 from "..//../assets/videos/eldenring-kf-03-animated-new.webm";
-
 import { useEffect, useRef } from "react";
 
-export default function KeyFeatures() {
+type Props = {
+  width: number;
+};
+
+export default function KeyFeatures({ width }: Props) {
   const videosRef = useRef<NodeListOf<HTMLVideoElement> | null>(null);
   useEffect(() => {
     videosRef.current = document.querySelectorAll("video");
@@ -61,31 +64,60 @@ export default function KeyFeatures() {
         </section>
       </div>
 
-      <div className="video-text-wrapper">
-        <section className="text-container-left">
-          <div className="text-container-title-2 margin-bottom">
-            <h1>WORLD EXPLORATION IN THE LANDS BETWEEN</h1>
-          </div>
-          <p className="margin-bottom">
-            ELDEN RING features vast fantastical landscapes and shadowy, complex
-            dungeons that are connected seamlessly.
-          </p>
+      {width >= 850 ? (
+        <div className="video-text-wrapper">
+          <section className="text-container-left">
+            <div className="text-container-title-2 margin-bottom">
+              <h1>WORLD EXPLORATION IN THE LANDS BETWEEN</h1>
+            </div>
+            <p className="margin-bottom">
+              ELDEN RING features vast fantastical landscapes and shadowy,
+              complex dungeons that are connected seamlessly.
+            </p>
 
-          <p>
-            Traverse the breathtaking world on foot or on horseback, alone or
-            online with other players, and fully immerse yourself in the grassy
-            plains, suffocating swamps, spiraling mountains, foreboding castles
-            and other sites of grandeur on a scale never seen before in a
-            FromSoftware title.
-          </p>
-        </section>
-        <section className="video-container-right">
-          <video>
-            <source src={video2} type="video/webm" />
-            Your browser can't play video
-          </video>
-        </section>
-      </div>
+            <p>
+              Traverse the breathtaking world on foot or on horseback, alone or
+              online with other players, and fully immerse yourself in the
+              grassy plains, suffocating swamps, spiraling mountains, foreboding
+              castles and other sites of grandeur on a scale never seen before
+              in a FromSoftware title.
+            </p>
+          </section>
+          <section className="video-container-right">
+            <video>
+              <source src={video2} type="video/webm" />
+              Your browser can't play video
+            </video>
+          </section>
+        </div>
+      ) : (
+        <div className="video-text-wrapper">
+          <section className="video-container-right">
+            <video>
+              <source src={video2} type="video/webm" />
+              Your browser can't play video
+            </video>
+          </section>
+          <section className="text-container-left">
+            <div className="text-container-title-2 margin-bottom">
+              <h1>WORLD EXPLORATION IN THE LANDS BETWEEN</h1>
+            </div>
+            <p className="margin-bottom">
+              ELDEN RING features vast fantastical landscapes and shadowy,
+              complex dungeons that are connected seamlessly.
+            </p>
+
+            <p>
+              Traverse the breathtaking world on foot or on horseback, alone or
+              online with other players, and fully immerse yourself in the
+              grassy plains, suffocating swamps, spiraling mountains, foreboding
+              castles and other sites of grandeur on a scale never seen before
+              in a FromSoftware title.
+            </p>
+          </section>
+        </div>
+      )}
+
       <div className="video-text-wrapper">
         <section className="video-container">
           <video>

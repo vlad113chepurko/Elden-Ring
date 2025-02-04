@@ -31,7 +31,7 @@ function App() {
     <>
       {width >= 850 ? <Header /> : <HeaderMobile />}
       <UnderHeader />
-      <Main />
+      <Main width={width}/>
       <Footer />
     </>
   );

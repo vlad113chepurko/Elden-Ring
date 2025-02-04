@@ -1,8 +1,15 @@
 .key-wrapper {
   width: 100%;
   height: auto;
-  border: 1px solid red;
   @include flex(none, column, none);
+}
+
+.key-wrapper {
+  video {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+  }
 }
 
 .key-title {
@@ -13,7 +20,6 @@
 
 .video-container {
   width: 50%;
-  border: 1px solid;
 
   @include flex(flex-end, none, none);
   padding-right: 1rem;
@@ -21,7 +27,6 @@
 
 .video-container-right {
   width: 50%;
-  border: 1px solid;
 
   @include flex(flex-start, none, none);
   padding-left: 1rem;
@@ -29,7 +34,6 @@
 
 .text-container {
   width: 50%;
-  border: 1px solid;
   padding-left: 1rem;
   padding-top: 2rem;
 
@@ -44,7 +48,6 @@
 
 .text-container-left {
   width: 50%;
-  border: 1px solid;
   padding-right: 1rem;
   padding-top: 2rem;
 
@@ -58,40 +61,12 @@
   }
 }
 
-.video-container video {
-  width: 560px;
-  height: 320px;
-}
-
 .video-text-wrapper {
   max-width: 100%;
   height: auto;
   @include flex(center, row, center);
-  border: 1px solid red;
 
   margin-bottom: 5%;
-}
-
-@mixin position($top, $bottom, $left, $right) {
-  top: $top;
-  bottom: $bottom;
-  left: $left;
-  right: $right;
-}
-
-@mixin title($width, $height, $align) {
-  position: relative;
-  text-align: $align;
-  width: $width;
-  height: $height;
-  padding: 2rem;
-  background-color: $white-brown;
-
-  @include flex(flex-end, none, center);
-
-  h1 {
-    @include text(white, $Arial);
-  }
 }
 
 .text-container-title-1 {
@@ -114,7 +89,16 @@
     text-align: center;
     width: none;
   }
+
+  .key-wrapper {
+    video {
+      height: 220px;
+      margin: 2rem;
+    }
+  }
+
   .key-title {
+    margin-top: 2rem;
     font-size: 1.5rem;
   }
   .video-text-wrapper {
@@ -127,12 +111,6 @@
     height: auto;
     padding: 0;
     justify-content: center;
-
-    video {
-      width: 100%;
-      height: 200px;
-      object-fit: contain;
-    }
   }
 
   .video-container-right {
@@ -140,24 +118,60 @@
     height: auto;
     padding: 0;
     justify-content: center;
-
-    video {
-      width: 100%;
-      height: 200px;
-      object-fit: contain;
-    }
   }
 
   .text-container {
     width: 100%;
     padding: 0;
+    align-items: center;
     justify-content: center;
+
+    p {
+      font-size: 0.8rem;
+    }
   }
 
   .text-container-title-1 {
-    @include title(300px, 3.3rem, left);
+    @include title(280px, 3rem, none);
+    margin: 0;
     padding: 0;
-    @include flex(flex-start, none, center);
-    @include position(20%, 0, 0, 0);
+    @include flex(flex-end, none, center);
+    font-size: 0.8rem;
+    position: absolute;
+    top: 118%;
+    left: 0%;
+  }
+
+  .text-container-title-2 {
+    @include title(280px, 3rem, none);
+    margin: 0;
+    padding: 0;
+    @include flex(flex-end, none, center);
+    font-size: 0.8rem;
+    position: absolute;
+    top: 173%;
+    left: 0%;
+  }
+
+  .text-container-title-3 {
+    @include title(280px, 3rem, none);
+    margin: 0;
+    padding: 0;
+    @include flex(flex-end, none, center);
+    font-size: 0.8rem;
+    position: absolute;
+    top: 227%;
+    left: 0%;
+  }
+
+  .text-container-left {
+    width: 100%;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-size: 0.8rem;
+    }
   }
 }

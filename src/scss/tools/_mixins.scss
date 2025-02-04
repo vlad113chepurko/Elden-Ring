@@ -15,3 +15,25 @@
   max-width: 100%;
   height: auto;
 }
+
+@mixin position($top, $bottom, $left, $right) {
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+}
+
+@mixin title($width, $height, $align) {
+  position: relative;
+  text-align: $align;
+  width: $width;
+  height: $height;
+  padding: 2rem;
+  background-color: $white-brown;
+
+  @include flex(flex-end, none, center);
+
+  h1 {
+    @include text(white, $Arial);
+  }
+}

@@ -1,0 +1,50 @@
+.heroes-container {
+  @include flex(none, column, none);
+  margin: 0 auto;
+  padding: 0 24px;
+  max-width: 100%;
+}
+
+.heroes-article {
+  @include flex(flex-start, column, none);
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 4rem;
+}
+
+.heroes-title {
+  @include text(white, $Arial);
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.heroes-paragraph {
+  @include text(white, $Cinzel);
+  font-size: 1rem;
+}
+
+.heroes-images-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17%;
+  max-width: 100%;
+  height: auto;
+}
+
+.heroes-image-container {
+  width: 360px;
+  height: 500px;
+
+  @include flex(center, column, center);
+
+  overflow: hidden;
+
+  background: rgba($white-brown, 0.4);
+  border: 4px solid white;
+  object-fit: cover;
+}
+
+.heroes-image-container img {
+  width: 360px;
+  height: 400px;
+}
