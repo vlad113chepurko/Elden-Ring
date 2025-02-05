@@ -1,0 +1,61 @@
+@import "../tools/mixins";
+
+.container-wishlist-wrapper {
+  margin-top: 8%;
+  margin-bottom: 8%;
+  width: 100%;
+  height: auto;
+
+  @include text(white, $Arial);
+  @include flex(center, column, center);
+}
+
+.container-wishlist-selection-wrapper {
+  @include flex(center, row, center);
+  width: 100%;
+  height: auto;
+
+  gap: 5%;
+}
+
+.container-wishlist-section {
+  width: 300px;
+  height: 60px;
+  background-color: whitesmoke;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include flex(space-between, row, center);
+}
+
+.container-wishlist-title {
+    margin: 5rem;
+}
+
+.container-wishlist-section:hover {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid $white-brown;
+}
+
+.container-wishlist-section p {
+  font-size: 1.5rem;
+  @include text($white-brown, $Arial);
+}
+
+.container-wishlist-title {
+  font-size: 1.5rem;
+  @include text(white, $Arial);
+}
+
+@media screen and (max-width: 850px) {
+  .container-wishlist-selection-wrapper {
+    @include flex(center, column, center);
+  }
+
+  .container-wishlist-section {
+    width: 100%;
+    height: 60px;
+    margin: 1rem;
+  }
+}

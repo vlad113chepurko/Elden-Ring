@@ -1,12 +1,15 @@
 import History from "../main/History";
 import KeyFeatures from "./KeyFeatures";
 import Heroes from "./Heroes";
+import InputContainer from "./InputContainer";
+import WishList from "./WishList";
 
 import img1 from "../../assets/ELDENRING_05_4K.jpg";
 import img2 from "../../assets/ELDENRING_08_4K.jpg";
 import img3 from "../../assets/ELDENRING_12_4K.jpg";
 import elden_line from "../../assets/elden-line.svg";
 import ornament from '../../assets/Elden-ring-ornament-icon-feather-two 1.svg';
+
 
 type Props = {
   width: number;
@@ -61,8 +64,8 @@ export default function Main({ width }: Props) {
             broken remnants of cities left behind by the Shattering. They may
             have answers for you, if you help them. Above them all, ensconced in
             vast legacies bristling with traps, secrets, and guardians, the
-            Demigods – warped Lords who began as members of a royal and noble
-            family – rule their domains with the unyielding power granted by
+            Demigods - warped Lords who began as members of a royal and noble
+            family - rule their domains with the unyielding power granted by
             shards of the Elden Ring.
           </p>
         </section>
@@ -118,6 +121,8 @@ export default function Main({ width }: Props) {
       <span className="ornament-container">
         <img className="ornament" src={ornament} alt="ornament" />
       </span>
+      <WishList />
+      <InputContainer />
     </main>
   );
 }

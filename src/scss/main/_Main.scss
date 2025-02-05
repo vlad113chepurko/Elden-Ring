@@ -2,6 +2,9 @@
 @import "./HistoryContainer";
 @import "./KeyFeatures";
 @import "./Heroes";
+@import "./InputContainer";
+@import "./ContainerWishList";
+
 @import "../tools//mixins";
 
 .main-container {
@@ -66,13 +69,30 @@
   height: 200px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .title-article {
     font-size: 1rem;
   }
 
   .article-paragraph {
     font-size: 0.8rem;
+    width: 400px;
     margin-bottom: 1rem;
+  }
+
+  .paragraph-container {
+    max-width: 100%;
+    padding: 1rem;
+    @include flex(center, column, center);
+  }
+
+  .container-images {
+    @include flex(center, column, center);
+
+    img {
+      width: 300px;
+      height: auto;
+      margin-bottom: 5%;
+    }
   }
 }

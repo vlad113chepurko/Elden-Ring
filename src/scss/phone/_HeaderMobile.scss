@@ -1,15 +1,15 @@
 @import "../tools/mixins";
 
 .header-mobile {
-  max-width: 100%;
+  width: 100%;
   max-height: auto;
   height: 50px;
   padding: 10px;
 
+  position: fixed;
+
   background-color: $header-color;
   text-align: center;
-
-  position: relative;
 
   z-index: 1000;
   @include flex(space-between, row, center);

@@ -73,6 +73,10 @@ ul li a {
   }
 }
 
+input::placeholder {
+  color: rgb(89, 88, 88);
+}
+
 @media screen and (max-width: 850px) {
   .elden-line img {
     width: 300px;
