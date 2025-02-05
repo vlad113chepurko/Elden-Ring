@@ -3,6 +3,7 @@ import KeyFeatures from "./KeyFeatures";
 import Heroes from "./Heroes";
 import InputContainer from "./InputContainer";
 import WishList from "./WishList";
+import ParamsDisplay from "./ParamsDisplay";
 
 import img1 from "../../assets/ELDENRING_05_4K.jpg";
 import img2 from "../../assets/ELDENRING_08_4K.jpg";
@@ -123,6 +124,7 @@ export default function Main({ width }: Props) {
       </span>
       <WishList />
       <InputContainer />
+      <ParamsDisplay />``
     </main>
   );
 }

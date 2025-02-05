@@ -5,6 +5,8 @@
   max-height: auto;
   background-color: $header-color;
 
+  z-index: 1000;
+
   position: fixed;
 
   @include flex(space-between, row, none);

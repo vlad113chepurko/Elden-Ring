@@ -1,0 +1,81 @@
+@import "../tools/mixins";
+
+.container-params-wrapper {
+  @include flex(center, column, center);
+  max-width: 100%;
+  height: auto;
+
+  border: 1px solid red;
+}
+
+.container-params-title {
+    @include text(white, $Arial);
+    font-size: 2rem;
+
+    margin: 1.5rem
+}
+
+.container-params-title-section {
+  @include text(white, $Arial);
+  font-size: 1.5rem;
+
+margin: 1.5rem;
+
+  width: 50%;
+  height: auto;
+
+  border: 1px solid blue;
+
+  text-align: left;
+}
+
+.container-params-selection-wrapper {
+  @include flex(center, row, center);
+  width: 100%;
+  height: auto;
+
+  border: 1px solid green;
+}
+
+.section-title-wrapper {
+  width: 100%;
+  height: auto;
+  @include flex(center, row, center);
+}
+
+.section-title {
+  font-size: 1.2rem;
+  width: 50%;
+  height: auto;
+  @include text(white, $Arial);
+}
+
+.param-section {
+  width: 50%;
+  border: 1px solid white;
+  height: 300px;
+
+  padding: 10px;
+
+  border: 1px solid red;
+
+  @include flex(flex-start, none, center);
+}
+
+.param-section ul {
+  list-style-type: disc;
+}
+
+.param-section ul li {
+  @include text(white, $Arial);
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+.italical-para {
+  font-style: italic;
+  list-style: none;
+  color: white;
+  font-size: 1rem;
+}
