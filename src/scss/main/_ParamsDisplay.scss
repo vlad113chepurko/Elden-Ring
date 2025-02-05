@@ -4,8 +4,6 @@
   @include flex(center, column, center);
   max-width: 100%;
   height: auto;
-
-  border: 1px solid red;
 }
 
 .container-params-title {
@@ -24,8 +22,6 @@ margin: 1.5rem;
   width: 50%;
   height: auto;
 
-  border: 1px solid blue;
-
   text-align: left;
 }
 
@@ -33,8 +29,6 @@ margin: 1.5rem;
   @include flex(center, row, center);
   width: 100%;
   height: auto;
-
-  border: 1px solid green;
 }
 
 .section-title-wrapper {
@@ -56,8 +50,6 @@ margin: 1.5rem;
   height: 300px;
 
   padding: 10px;
-
-  border: 1px solid red;
 
   @include flex(flex-start, none, center);
 }
