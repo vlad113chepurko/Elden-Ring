@@ -16,8 +16,8 @@ export default function Footer() {
           <li className="wrapper-li">
             <a href="www.linkedin.com/in/vlad-chepurko-0953b32b0">
               <img src={linkedIn} alt="linkedIn" />
-              <a href="https://github.com/vlad113chepurko">LinkedIn</a>
             </a>
+            <a href="https://github.com/vlad113chepurko">LinkedIn</a>
           </li>
         </ul>
       </section>

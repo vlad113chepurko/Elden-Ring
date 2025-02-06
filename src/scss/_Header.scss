@@ -100,10 +100,12 @@
 
 .left-article {
   @include flex(left, none, center);
+  margin-left: 1rem;
 }
 
 .right-article {
   @include flex(right, none, center);
+  margin-right: 1rem;
 }
 
 .under-header-container-image {
@@ -120,6 +122,14 @@
 @media screen and (max-width: 850px) {
   .under-header-container img {
     width: 140px;
+  }
+
+  .right-article {
+    font-size: 0.6rem;
+  }
+
+  .left-article {
+    font-size: 0.6rem;
   }
 
   .under-header-container {

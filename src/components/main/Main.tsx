@@ -84,7 +84,7 @@ export default function Main({ width }: Props) {
       </span>
       <article className="paragraph-container">
         <p className="article-paragraph">
-          The guidance of lost graces – should you find them - will put you on a
+          The guidance of lost graces - should you find them - will put you on a
           road to re-take these lands from the Demigods through might and magic,
           but you need not follow their path.
         </p>
